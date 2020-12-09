@@ -19,12 +19,9 @@ sample_config = SSHConfig(
 )
 
 
-def read_lines_from_file(list_of_files):
-    lines = []
-    with open(list_of_files) as files:
-        for file in files:
-            lines.append(file.strip('\n'))
-
+def read_lines_from_file(txt_files):
+    with open(txt_files) as files:
+        lines = [file.strip('\n') for file in files]
     return lines
 
 
